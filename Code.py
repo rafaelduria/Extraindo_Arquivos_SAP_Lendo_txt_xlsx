@@ -1204,11 +1204,11 @@ def play():
 
 
     def Enviar_Email():       
-        remetente = 'cadastro@ciser.com.br'
-        senha_rede = 'ciscad01**' # Colocar aqui a senha do e-mail do cadastro@ciser.com.br
-        destinatario = 'rafael.refundini@ciser.com.br'
-        destinatario2 = 'cadastro@ciser.com.br'
-        destinatario3 = 'rafael.ramalho@ciser.com.br'
+        remetente = 'email_remetente'
+        senha_rede = 'senha_rede' # Colocar aqui a senha do e-mail
+        destinatario = 'email_restinatario'
+        destinatario2 = 'email_restinatario'
+        destinatario3 = 'email_restinatario'
         assunto = 'Relatório Marcar itens para eliminar'
         # Preenche abaixo o corpo da mensagem.
         texto = f"""
@@ -1232,7 +1232,7 @@ def play():
         msg.attach(part)
         
         msg.attach(MIMEText(_text=texto.encode('utf-8'), _charset='utf-8'))
-        port = 587 if '@ciser' in destinatario else 25
+        port = 587 if '@empresa' in destinatario else 25
         server = smtplib.SMTP(host='smtp.office365.com', port=port)
         server.ehlo()
         server.starttls()
