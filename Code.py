@@ -1520,8 +1520,8 @@ import sqlalchemy
 import pandas as pd
 import numpy as np
 from sqlalchemy import create_engine
-servidor_dns = 'cismssql03.ciser.com.br'
-servidor_database = 'inteligcom'
+servidor_dns = 'Servidor'
+servidor_database = 'Base ded dados'
 url = f'mssql+pyodbc://@{servidor_dns}/{servidor_database}?trusted_connection=yes&driver=SQL+Server'
 engine = sqlalchemy. create_engine (url)
 
@@ -1582,8 +1582,8 @@ import sqlalchemy
 import pandas as pd
 import numpy as np
 from sqlalchemy import create_engine
-servidor_dns = 'cismssql03.ciser.com.br'
-servidor_database = 'inteligcom'
+servidor_dns = 'Servidor'
+servidor_database = 'Base de dados'
 url = f'mssql+pyodbc://@{servidor_dns}/{servidor_database}?trusted_connection=yes&driver=SQL+Server'
 engine = sqlalchemy. create_engine (url)
 
@@ -1931,8 +1931,8 @@ import sqlalchemy
 import pandas as pd
 import numpy as np
 from sqlalchemy import create_engine
-servidor_dns = 'cismssql03.ciser.com.br'
-servidor_database = 'inteligcom'
+servidor_dns = 'Servidor'
+servidor_database = 'Base de dados'
 url = f'mssql+pyodbc://@{servidor_dns}/{servidor_database}?trusted_connection=yes&driver=SQL+Server'
 engine = sqlalchemy. create_engine (url)
 
@@ -1957,8 +1957,8 @@ import sqlalchemy
 import pandas as pd
 import numpy as np
 from sqlalchemy import create_engine
-servidor_dns = 'cismssql03.ciser.com.br'
-servidor_database = 'inteligcom'
+servidor_dns = 'Servidor'
+servidor_database = 'Base de dados'
 url = f'mssql+pyodbc://@{servidor_dns}/{servidor_database}?trusted_connection=yes&driver=SQL+Server'
 engine = sqlalchemy. create_engine (url)
 
