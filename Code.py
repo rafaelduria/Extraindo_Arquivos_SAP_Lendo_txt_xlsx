@@ -47,7 +47,7 @@ cinco_dias_atras = str(cinco_dias_atras.replace("/","."))
 class SapGui():
     
     def __init__ (self):
-        self.path = r"C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe"        
+        self.path = r"caminho onde sap está instalado"        
         subprocess.Popen(self.path)
         aberto = False
         sleep(1)
@@ -68,8 +68,8 @@ class SapGui():
     def SapLogin(self):
         try:
             self.session.findById("wnd[0]").maximize      
-            self.session.findById("wnd[0]/usr/txtRSYST-BNAME").text = "Rafaeldr"
-            self.session.findById("wnd[0]/usr/pwdRSYST-BCODE").text = "5950149"
+            self.session.findById("wnd[0]/usr/txtRSYST-BNAME").text = "usuario_sap"
+            self.session.findById("wnd[0]/usr/pwdRSYST-BCODE").text = "senha_sap"
             self.session.findById("wnd[0]").sendVKey(0)
         except:
             print(sys.exc_info()[0])
@@ -2242,17 +2242,17 @@ def enviar_email1():
     ano = data_day.year
     name_excel = f'{ano}-{mes}-{dia}'
             
-    remetente = 'cadastro@ciser.com.br'
-    senha_rede = 'ciscad01**' # Colocar aqui a senha do e-mail do cadastro@ciser.com.br
+    remetente = 'email'
+    senha_rede = '******' # Colocar aqui a senha do e-mail
 
-    destinatario7 = 'gabriela.bayer@ciser.com.br'
-    destinatario2 = 'rafael.ramalho@ciser.com.br'
-    destinatario3 = 'morgana.secchi@ciser.com.br'
-    destinatario4 = 'hebert.costa@ciser.com.br'
-    destinatario5 = 'suellen.hess@ciser.com.br'
-    destinatario6 = 'bruna.silva@ciser.com.br'
-    destinatario8 = 'mario.sotopietra@ciser.com.br'
-    destinatario1 = 'rafael.refundini@ciser.com.br'
+    destinatario7 = 'destinario@.com.br'
+    destinatario2 = 'destinario@.com.br'
+    destinatario3 = 'destinario@.com.br'
+    destinatario4 = 'destinario@.com.br'
+    destinatario5 = 'destinario@.com.br'
+    destinatario6 = 'destinario@.com.br'
+    destinatario8 = 'destinario@.com.br'
+    destinatario1 = 'destinario@.com.br'
 
     assunto = 'Relatório Dedo Duro'
     # Preenche abaixo o corpo da mensagem.
@@ -2290,7 +2290,7 @@ def enviar_email1():
     msg.attach(part)
 
     msg.attach(MIMEText(_text=texto.encode('utf-8'), _charset='utf-8'))
-    port = 587 if '@ciser' in destinatario1 else 25
+    port = *** if '#empresa' in destinatario1 else 25
     server = smtplib.SMTP(host='smtp.office365.com', port=port)
     server.ehlo()
     server.starttls()
